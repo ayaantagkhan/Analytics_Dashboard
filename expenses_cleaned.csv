@@ -1,0 +1,48 @@
+Date,Merchant,Category,Amount,Payment Method,Description,Location,Recurring
+2026-06-20,QuikTrip,Gas,27.64,Cash,Personal expense,"Frisco, TX",No
+2026-07-20,Kroger,Groceries,119.87,Apple Pay,Monthly bill,"Plano, TX",No
+2026-09-04,CVS Pharmacy,Health,21.82,Apple Pay,Personal expense,"Allen, TX",No
+2026-02-08,STARBUCKS,Shopping,34.14,Cash,,Online,No
+2026-04-06,LA Fitness,Health & Fitness,29.87,Cash,Personal expense,"Plano, TX",Yes
+2026-08-07,DoorDash,food & dining,37.91,Visa,Personal expense,"Frisco, TX",No
+2026-05-01,Chipotle,Food & Dining,18.0,Cash,Lunch,"Dallas, TX",No
+2026-04-23,CVS Pharmacy,Health,,Mastercard,Household purchase,"Plano, TX",No
+2026-08-31,QuikTrip,Gas,47.34,Apple Pay,Monthly bill,"Frisco, TX",No
+2026-02-14,Starbucks,Food & Dining,4.67,Cash,Personal expense,"Frisco, TX",No
+2026-04-17,Starbucks,Food & Dining,5.96,Cash,Lunch,"Plano, TX",No
+2026-04-17,Amazon,Shopping,144.32,Apple Pay,Weekend purchase,"Richardson, TX",No
+2026-04-03,Starbucks,Food & Dining,4.87,Mastercard,Monthly bill,"Plano, TX",No
+2026-04-02,Uber,Groceries,43.34,Cash,Lunch,"Richardson, TX",No
+2026-05-03,TXU Energy,Utilities,142.37,Visa,Monthly bill,"Plano, TX",Yes
+2026-01-05,AMC Theatres,Entertainment,29.25,debit card,Personal expense,"Richardson, TX",No
+2026-02-18,AMC Theatres,Entertainment,38.91,Visa,Online order,"Plano, TX",No
+2026-03-18,Starbucks,Food & Dining,12.75,Mastercard,Household purchase,"Plano, TX",Y
+2026-08-21,Shell,Gas,32.33,Cash,Personal expense,"Plano, TX",No
+2026-05-22,CVS Pharmacy,Health,9.3,Debit Card,Lunch,,No
+2026-07-06,Costco,Groceries,104.16,Visa,Quick stop,"Plano, TX",No
+2026-03-04,Apple,Subscriptions,42.18,Mastercard,Online order,Online,Yes
+2026-06-11,LA Fitness,Health & Fitness,41.14,Visa,Weekend purchase,"Frisco, TX",Yes
+2026-08-28,walmart,Groceries,92.32,Visa,Online order,"Allen, TX",No
+2026-03-26,Amazon,Shopping,21.59,Debit Card,Lunch,Online,No
+2026-05-03,CVS Pharmacy,SHOPPING,20.45,Apple Pay,Personal expense,"Allen, TX",No
+2026-08-24,TXU Energy,Utilities,187.01,Visa,Personal expense,"Plano, TX",Yes
+2026-02-26,QuikTrip,Gas,53.61,Mastercard,,"Frisco, TX",No
+2026-09-06,Starbucks,Food & Dining,9.6,Cash,Monthly bill,"Allen, TX",No
+2026-01-17,TXU Energy,Utilities,76.38,Apple Pay,Weekend purchase,"Frisco, TX",N
+2026-07-12,CVS Pharmacy,Health,49.99,Debit Card,Quick stop,"Allen, TX",No
+2026-04-25,TXU Energy,Utilities,168.34,Apple Pay,Household purchase,"Dallas, TX",Yes
+2026-08-22,Uber,Transportation,-18.75,Cash,Personal expense,"Richardson, TX",No
+2026-04-16,Uber,Transportation,46.02,Visa,Household purchase,"Plano, TX",No
+2026-07-04,Shell,Gas,41.05,Mastercard,Household purchase,"Frisco, TX",No
+2026-07-04,TXU Energy,Utilities,120.29,Cash,Lunch,"Plano, TX",Yes
+2026-05-02,QuikTrip,,31.94,Visa,Weekend purchase,"Frisco, TX",No
+2026-08-12,Chipotle,Food & Dining,9.91,Cash,Weekend purchase,"Frisco, TX",No
+2026-04-10,Target,Groceries,91.7,Visa,Weekend purchase,"Dallas, TX",No
+2026-04-14,AT&T,Utilities,84.71,Mastercard,Household purchase,"Richardson, TX",Yes
+2026-03-10,Home Depot,Home,89.4,Apple Pay,Lunch,"Plano, TX",No
+2026-02-28,Apple,Subscriptions,9.46,Visa,Household purchase,Online,Yes
+2026-02-28,Costco,Groceries,196.44,,Monthly bill,"Dallas, TX",No
+2026-09-09,AT&T,Utilities,57.92,Cash,Weekend purchase,"Richardson, TX",Yes
+2026-05-06,Apple,Subscriptions,10.35,Apple Pay,,Online,yes
+2026-02-24,AT&T,Utilities,64.75,Debit Card,Quick stop,"Plano, TX",Yes
+2026-07-11,AMC Theatres,Entertainment,39.1,Mastercard,Weekend purchase,"plano, tx",No
