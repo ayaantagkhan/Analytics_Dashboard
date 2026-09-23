@@ -53,6 +53,6 @@ def clean_text(dataframe):
         include=['object', 'string']).columns
 
     for column in text_columns:
-        dataframe[column] = dataframe[column].str.strip()
+        dataframe[column] = dataframe[column].str.strip().str.title()
 
     return dataframe
