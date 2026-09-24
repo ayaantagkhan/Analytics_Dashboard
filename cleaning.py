@@ -53,6 +53,61 @@ def clean_text(dataframe):
         include=['object', 'string']).columns
 
     for column in text_columns:
-        dataframe[column] = dataframe[column].str.strip().str.title()
+        dataframe[column] = dataframe[column].str.strip()
+
+        if column in ["Category", "Payment Method"]:
+            dataframe[column] = dataframe[column].str.title()
 
     return dataframe
+
+def clean_recurring(dataframe):
+    dataframe = dataframe.copy()
+
+    dataframe["Recurring"] = (
+        dataframe["Recurring"]
+        .astype("String")
+        .str.strip()
+        .str.lower()
+        .map({
+            "yes": "Yes",
+            "y": "Yes",
+            "no": "No",
+            "n": "No",
+        })
+    )
+
+    return dataframe
+
+def clean_merchants(dataframe):
+    dataframe = dataframe.copy()
+
+    dataframe("Merchant") = (
+        dataframe["Merchant"]
+        .str.strip()
+        .str.title()
+        .replace({
+            "CVS Pharmacy": "CVS",
+            "At&t": "AT&T",
+            "Doordash": "DoorDash",
+            "Quiktrip": "QuikTrip",
+            "La Fitness": "LA Fitness",
+            "Txu Energy": "TXU Energy",
+            "Amc Theatres": "AMC Theatres",
+        })
+    )
+
+    return dataframe
+
+def clean_categories(dataframe):
+    dataframe = dataframe.copy()
+
+    dataframe["Category"] = (
+        dataframe["Category"]
+        .str.strip()
+        .str.title()
+        .replace("", pd.NA)
+        .fillna("Uncategorized")
+    )
+
+    return dataframe
+
