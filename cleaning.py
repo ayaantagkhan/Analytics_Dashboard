@@ -111,3 +111,34 @@ def clean_categories(dataframe):
 
     return dataframe
 
+def clean_payment_methods(dataframe):
+    dataframe = dataframe.copy()
+
+    dataframe["Payment Method"] = (
+        dataframe["Payment Method"]
+        .str.strip()
+        .str.title()
+        .repalce("", pd.NA)
+        .fillna("Uncategorized")
+    )
+    
+    return dataframe
+
+def clean_locations(dataframe):
+    dataframe = dataframe.copy()
+
+    dataframe["Location"] = (
+        dataframe["Location"]
+        .str.strip()
+        .str.title()
+        .str.replace(
+            r",\s*([A-za-z]{2})$",
+            lambda match: "," + match.group(1).upper(),
+            regex = True
+        )
+        .replace("", pd.NA)
+        .fillna("Unknown")
+    )
+
+    return dataframe
+
