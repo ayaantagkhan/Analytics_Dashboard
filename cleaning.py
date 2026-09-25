@@ -2,8 +2,6 @@
 
 import pandas as pd 
 
-dataframe = pd.read_excel("personal_expenses.xlsx")
-
 def remove_duplicates(dataframe):
     dataframe = dataframe.drop_duplicates()
     return dataframe
@@ -65,7 +63,7 @@ def clean_recurring(dataframe):
 
     dataframe["Recurring"] = (
         dataframe["Recurring"]
-        .astype("String")
+        .astype("string")
         .str.strip()
         .str.lower()
         .map({
@@ -81,12 +79,12 @@ def clean_recurring(dataframe):
 def clean_merchants(dataframe):
     dataframe = dataframe.copy()
 
-    dataframe("Merchant") = (
+    dataframe["Merchant"] = (
         dataframe["Merchant"]
         .str.strip()
         .str.title()
         .replace({
-            "CVS Pharmacy": "CVS",
+            "Cvs Pharmacy": "CVS Pharmacy",
             "At&t": "AT&T",
             "Doordash": "DoorDash",
             "Quiktrip": "QuikTrip",
@@ -118,7 +116,7 @@ def clean_payment_methods(dataframe):
         dataframe["Payment Method"]
         .str.strip()
         .str.title()
-        .repalce("", pd.NA)
+        .replace("", pd.NA)
         .fillna("Uncategorized")
     )
     
@@ -132,13 +130,54 @@ def clean_locations(dataframe):
         .str.strip()
         .str.title()
         .str.replace(
-            r",\s*([A-za-z]{2})$",
-            lambda match: "," + match.group(1).upper(),
+            r",\s*([A-Za-z]{2})$",
+            lambda match: ", " + match.group(1).upper(),
             regex = True
         )
         .replace("", pd.NA)
         .fillna("Unknown")
     )
+
+    return dataframe
+
+def clean_descriptions(dataframe):
+    dataframe = dataframe.copy()
+
+    dataframe["Description"] = (
+        dataframe["Description"]
+        .str.strip()
+        .str.replace(r"\s+"," ", regex=True)
+        .fillna("")
+    )
+    
+    return dataframe
+
+def validate_expenses(dataframe):
+    dataframe = dataframe.copy()
+
+    dataframe["Missing Date"] = dataframe["Date"].isna()
+    dataframe["Missing Amount"] = dataframe["Amount"].isna()
+    dataframe["Possible Refund"] = dataframe["Amount"] < 0
+
+    return dataframe
+
+def clean_expenses(dataframe):
+    steps = [
+        clean_dates,
+        clean_amount,
+        clean_text,
+        clean_recurring,
+        clean_merchants,
+        clean_categories,
+        clean_payment_methods,
+        clean_locations,
+        clean_descriptions,
+        remove_duplicates,
+        validate_expenses,
+    ]
+
+    for step in steps:
+        dataframe = step(dataframe)
 
     return dataframe
 
